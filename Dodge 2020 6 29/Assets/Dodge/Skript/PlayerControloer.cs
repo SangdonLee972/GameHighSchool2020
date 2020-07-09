@@ -26,4 +26,14 @@ public class PlayerControloer : MonoBehaviour
 
         
     }
+
+    public void Die()
+    {
+        gameObject.SetActive(false);
+    }
+
+    public void Success()
+    {
+        gameObject.SetActive(false);
+    }
 }
