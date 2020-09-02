@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D m_Rigidbody2D;
 
+    public float m_ClimbSpeed =2f;
     public float m_XAxisSpeed = 5f;
     public float m_YAxisSpeed = 5f;
     public float m_YJumpPower = 500f;
@@ -28,7 +29,7 @@ public class PlayerController : MonoBehaviour
         velocity.x = xAxis * m_XAxisSpeed;
         if(Climp)
         {
-            velocity.y = yAxis * m_YAxisSpeed;
+            velocity.y = yAxis * m_ClimbSpeed;
         }
         m_Rigidbody2D.velocity = velocity;
 
