@@ -67,10 +67,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Item")
+        {
+            var item = collision.GetComponent<ItemComponet>();
+            if (item != null)
+                item.BeAte();
+        }
+    }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Ladder")
-
+        
             if (Climp)
             {
                 Climp = false;
