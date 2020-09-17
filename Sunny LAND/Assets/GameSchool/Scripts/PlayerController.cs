@@ -12,7 +12,8 @@ public class PlayerController : MonoBehaviour
     public float m_XAxisSpeed = 5f;
     public float m_YAxisSpeed = 5f;
     public float m_YJumpPower = 500f;
-    bool Climp = false; 
+    bool Climp = false;
+    bool Die = false;
     public int m_JumpCount = 0;
 
     protected void Start()
@@ -100,6 +101,16 @@ public class PlayerController : MonoBehaviour
                 var animators = GetComponent<Animator>();
                 animators.SetBool("Climp", true) ;
             }
+
+        if(collision.tag == "Enemie")
+        {
+            if(!Die)
+            {
+                Die = true;
+                var animators = GetComponent<Animator>();
+                animators.SetBool("Die", true);
+            }
+        }
     }
 
 

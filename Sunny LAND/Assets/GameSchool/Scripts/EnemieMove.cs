@@ -13,10 +13,10 @@ public class EnemieMove : MonoBehaviour
     private float m_PatrolTime;
     public bool m_Go = true;
 
-    public void Start()
+    public void Awake()
     {
         m_StartPps = transform.position;
-        m_PatrolPos = transform.position + m_PatrolPos;
+        m_PatrolPos = transform.position + m_PatrolOffset;
     }
 
     public void ResetPatrolPos()

@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e0fc6ef6e8bd3044afb8b8ceb802bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PatrolPos: {x: 5, y: 0, z: 0}
+  m_PatrolPos: {x: 0, y: 0, z: 0}
   m_PatrolOffset: {x: 0, y: 0, z: 0}
   m_PatrolTerm: 2
   m_Go: 1
